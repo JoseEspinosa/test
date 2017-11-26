@@ -6,6 +6,7 @@ jobs:
       - image: pergola/pergola@sha256:f7208e45e761dc0cfd3e3915237eb1a96eead6dfa9c8f3a5b2414de9b8df3a3d
     steps:
       - checkout
+      - setup_remote_docker:
       - run:
           name: Install Nextflow
           command: curl -fsSL get.nextflow.io | bash

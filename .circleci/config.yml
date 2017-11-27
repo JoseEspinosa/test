@@ -13,5 +13,4 @@ jobs:
           command: curl -fsSL get.nextflow.io | bash
       - run:
           name: Run Pipeline
-#          command: ./nextflow run . -with-docker
-          command: ./nextflow run .
+          command: ./nextflow run . -with-docker

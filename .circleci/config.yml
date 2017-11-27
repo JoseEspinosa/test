@@ -10,9 +10,6 @@ jobs:
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
-      -run:
-         name: install jdk
-
       - run:
           name: Install Nextflow
           command: curl -fsSL get.nextflow.io | bash

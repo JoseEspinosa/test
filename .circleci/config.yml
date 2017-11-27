@@ -6,6 +6,7 @@ jobs:
 #    docker:
 #      - image: circleci/openjdk:8-jdk-browsers
 #      - image: pergola/pergola@sha256:f7208e45e761dc0cfd3e3915237eb1a96eead6dfa9c8f3a5b2414de9b8df3a3d
+    working_directory: ~/mouse-reproduce-nf
     steps:
       - checkout
 #      - setup_remote_docker:
@@ -16,11 +17,19 @@ jobs:
   test:
     machine:
       image: circleci/classic:201703-01
+    working_directory: ~/mouse-reproduce-nf
     steps:
       - checkout
       - run:
           name: Run Pipeline
           command: ./nextflow run . -with-docker
+
+#workflows:
+#  version: 2
+#  build_and_test:
+#    jobs:
+#      - build
+#      - test
 
 workflows:
   version: 2

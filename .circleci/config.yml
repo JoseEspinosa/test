@@ -24,8 +24,8 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test:
-
+      - test
+#      - test:
 #          requires:
 #            - build
 #          filters:
